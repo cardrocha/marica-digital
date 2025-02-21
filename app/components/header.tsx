@@ -13,7 +13,7 @@ export default function Header() {
           height={48}
           alt="Logo do Maricá Digital"
         />
-        <h1 className="text-2xl">Maricá Digital</h1>
+        <h1 className="text-2xl">Maricá Imóveis</h1>
       </Link>
       <nav>
         <ul className="flex gap-4">
@@ -24,10 +24,7 @@ export default function Header() {
             <li>Sobre</li>
           </Link>
           <Link className="hover:underline" href="#" title="ir para Entretenimento">
-            <li>Entretenimento</li>
-          </Link>
-          <Link className="hover:underline" href="#" title="ir para Esportes">
-            <li>Esportes</li>
+            <li>Casas</li>
           </Link>
           <Link className="hover:underline" href="#" title="ir para Contatos">
             <li>Contatos</li>
