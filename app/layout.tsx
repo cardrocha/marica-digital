@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${oxanium.variable} ${montserrat.variable} antialiased flex flex-col min-h-screen`}
+        className={`${oxanium.variable} ${montserrat.variable} bg-[url(/marica.jpg)] bg-no-repeat bg-center bg-cover antialiased flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex flex-1">{children}</main>

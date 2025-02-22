@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between text-white gap-8 py-4 px-8 bg-black">
+    <header className="flex items-center justify-between text-white gap-8 py-4 px-8 bg-purple-800 shadow-2xl">
       <Link href="#" title="clique aqui" className="flex items-center gap-4">
         <Image
           className="rounded-md"
