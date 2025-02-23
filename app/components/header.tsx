@@ -11,7 +11,7 @@ export default function Header() {
   const pathname = usePathname();
   
   return (
-    <header className="flex items-center justify-between text-white gap-8 py-4 px-8 bg-purple-800 shadow-2xl">
+    <header className="flex items-center justify-between text-white gap-8 py-4 px-8 bg-gradient-to-r from-fuchsia-900 to-purple-800 shadow-2xl">
       <Link href="#" title="clique aqui" className="flex items-center gap-4">
         <Image
           className="rounded-md"

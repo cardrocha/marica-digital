@@ -25,10 +25,4 @@ export const headerLinks: HeaderLink[] = [
     href: "/contato",
     text: "Contato",
   },
-  {
-    id: 5,
-    title: "Cadastro",
-    href: "/cadastro",
-    text: "Cadastro",
-  },
 ]
