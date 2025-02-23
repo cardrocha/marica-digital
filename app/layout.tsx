@@ -23,18 +23,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body
-        className={`${oxanium.variable} ${montserrat.variable} bg-[url(/marica.jpg)] bg-no-repeat bg-center bg-cover antialiased flex flex-col min-h-screen`}
+        className={`${oxanium.variable} ${montserrat.variable} max-w-[1360px] mx-auto bg-[url(/marica.jpg)] bg-no-repeat bg-center bg-cover antialiased flex flex-col min-h-screen overflow-y-scroll`}
       >
         <Header />
-        <main className="flex flex-1">{children}</main>
+        <main className="flex flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
   );
 }
+

@@ -1,8 +1,15 @@
+'use client'
+
+import { headerLinks } from "@/config/headerLinks";
 import logo from "@/public/marica.svg";
 import Image from "next/image";
 import Link from "next/link";
 
+import { usePathname } from "next/navigation";
+
 export default function Header() {
+  const pathname = usePathname();
+  
   return (
     <header className="flex items-center justify-between text-white gap-8 py-4 px-8 bg-purple-800 shadow-2xl">
       <Link href="#" title="clique aqui" className="flex items-center gap-4">
@@ -17,21 +24,15 @@ export default function Header() {
       </Link>
       <nav>
         <ul className="flex gap-4">
-          <Link className="hover:underline" href="#" title="ir para Home">
-            <li>Home</li>
+        {headerLinks.map((link) => (
+          <Link key={link.id}
+            href={link.href} 
+            title={link.title}
+            className={`link ${pathname === `${link.href}` ? "text-xl text-black font-semibold hover:underline" : "text-xl font-semibold text-white hover:underline"}`}
+            >
+            {link.text}
           </Link>
-          <Link className="hover:underline" href="#" title="ir para Sobre">
-            <li>Sobre</li>
-          </Link>
-          <Link className="hover:underline" href="#" title="ir para Entretenimento">
-            <li>Casas</li>
-          </Link>
-          <Link className="hover:underline" href="#" title="ir para Contatos">
-            <li>Contatos</li>
-          </Link>
-          <Link className="hover:underline" href="#" title="ir para Cadastro">
-            <li>Cadastro</li>
-          </Link>
+        ))}
         </ul>
       </nav>
     </header>
