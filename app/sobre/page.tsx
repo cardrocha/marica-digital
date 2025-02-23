@@ -9,7 +9,7 @@ export default function About() {
       </div>
       <div className='flex flex-col gap-4 w-[1000px] px-10 py-10'>
         <h1 className="text-4xl font-semibold bg-gradient-to-r from-purple-900 to-fuchsia-800 bg-clip-text text-transparent">
-          A Maricá Imovéis, tem a missão de realizar seu sonho
+          A Maricá Imovéis tem a missão de realizar seu sonho
         </h1>
         <p className="text-lg font-semibold text-gray-700">
           Com anos de experiência no mercado imobiliário, a Maricá Imóveis se
