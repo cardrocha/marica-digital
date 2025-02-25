@@ -26,15 +26,15 @@ export default function ImoveisItem({ property }: { property: Property }) {
           <House />
           Tipo: {property.tipo}
         </p>
-        <p className="text-lg flex item-center gap-2">
+        <p className="text-lg flex items-center gap-2">
           <BedDouble />
           Quartos: {property.quartos}
         </p>
-        <p className="text-lg flex item-center gap-2">
+        <p className="text-lg flex items-center gap-2">
           <ShowerHead />
           Banheiros: {property.banheiros}
         </p>
-        <p className="text-lg flex item-center gap-2">
+        <p className="text-lg flex items-center gap-2">
           <CarFront />
           Garagem: {property.garagem}
         </p>
