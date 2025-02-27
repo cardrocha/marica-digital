@@ -23,12 +23,12 @@ export default function Header() {
         <h1 className="text-2xl">Maricá Imóveis</h1>
       </Link>
       <nav>
-        <ul className="flex gap-4">
+        <ul className="flex gap-10">
         {headerLinks.map((link) => (
           <Link key={link.id}
             href={link.href} 
             title={link.title}
-            className={`link ${pathname === `${link.href}` ? "text-xl text-black font-semibold hover:underline" : "text-xl font-semibold text-white hover:underline"}`}
+            className={`link ${pathname === `${link.href}` ? "text-xl px-2 border-b-3 border-b-purple-500 bg-purple-400 rounded-br-2xl rounded-tl-2xl text-black font-semibold hover:underline" : "text-xl font-semibold text-white hover:underline"}`}
             >
             {link.text}
           </Link>

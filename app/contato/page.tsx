@@ -8,18 +8,18 @@ import Link from 'next/link'
 
 export default function ContatoPage() {
   return (
-    <div className="flex flex-col gap-8 w-[800px] h-[480px] mx-auto border-4 border-purple-500 rounded-xl bg-purple-100 p-4 my-10">
-      <h1 className="text-xl text-center font-semibold">
+    <div className="flex flex-col gap-4 w-[800px] h-[470px] mx-auto border-4 border-purple-500 rounded-xl bg-purple-100 p-4 my-10">
+      <h1 className="font-heading text-2xl text-center font-semibold">
         Está com alguma dúvida? Entre em contato conosco:
       </h1>
       <div>
-        <h2 className="pb-4 text-lg text-center font-semibold">
+        <h2 className="font-heading pb-4 text-xl text-center font-semibold">
           Nossas mídias sociais:
         </h2>
         <ul className="cursor-pointer flex justify-center gap-6">
           <li
             title="Clique para ir ao instagram"
-            className="flex items-center gap-2 hover:text-pink-600"
+            className="flex items-center gap-2 hover:text-pink-600 transition-colors duration-200"
           >
             <InstagramIcon />
             <Link
@@ -33,7 +33,7 @@ export default function ContatoPage() {
           </li>
           <li
             title="Clique para ir ao facebook"
-            className="cursor-pointer flex items-center gap-2 hover:text-blue-600"
+            className="cursor-pointer flex items-center gap-2 hover:text-blue-600 transition-colors duration-200"
           >
             <FacebookIcon />
             <Link
@@ -47,7 +47,7 @@ export default function ContatoPage() {
           </li>
           <li
             title="Clique para ir ao whatsapp"
-            className="cursor-pointer flex items-center gap-2 hover:text-green-600"
+            className="cursor-pointer flex items-center gap-2 hover:text-green-600 transition-colors duration-200"
           >
             <PhoneCall />
             <Link
@@ -61,7 +61,7 @@ export default function ContatoPage() {
           </li>
           <li
             title="Clique para ir ao linkedin"
-            className="cursor-pointer flex items-center gap-2 hover:text-sky-600"
+            className="cursor-pointer flex items-center gap-2 hover:text-sky-600 transition-colors duration-200"
           >
             <LinkedinIcon />
             <Link
@@ -75,25 +75,25 @@ export default function ContatoPage() {
           </li>
         </ul>
         <div className="mt-4 flex flex-col gap-4">
-          <h2 className="text-lg text-center font-semibold">
+          <h2 className="font-heading text-xl text-center font-semibold">
             Ou entre em contato por e-mail:
           </h2>
           <p className="text-lg text-center font-semibold">
             <Link
-              className="bg-gray-300 border py-1 px-2 rounded-4xl cursor-pointer"
+              className="bg-gray-300 hover:bg-gray-400 transition-colors border py-1 px-2 rounded-4xl cursor-pointer"
               href="mailto:maricaImoveis@email.com"
             >
               maricaImoveis@email.com
             </Link>
           </p>
         </div>
-        <div className="w-[305px] mx-auto justify-center mt-4">
-          <h2 className="pb-4 text-lg text-center font-semibold whitespace-nowrap">
+        <div className="w-[400px] mx-auto justify-center mt-4">
+          <h2 className="font-heading pb-4 text-xl text-center font-semibold whitespace-nowrap">
             Venha nos visitar e conhecer nossa loja!
           </h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.9148771814034!2d-42.821874625741074!3d-22.91651033821659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99ed9be4b49009%3A0xcb871b9e5c9244f8!2sR.%20Abreu%20Rangel%2C%20420%20-%20Eldorado%2C%20Maric%C3%A1%20-%20RJ%2C%2024900-890!5e0!3m2!1spt-BR!2sbr!4v1740517914019!5m2!1spt-BR!2sbr"
-            width="300"
+            width="400"
             height="150"
             className="border-2 border-black rounded-lg"
             allowFullScreen

@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { Montserrat, Oxanium } from "next/font/google";
-import "./globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import type { Metadata } from 'next'
+import { Montserrat, Oxanium } from 'next/font/google'
+import './globals.css'
+import Header from './components/header'
+import Footer from './components/footer'
 
 const oxanium = Oxanium({
   weight: ['500', '600'],
@@ -17,25 +17,20 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Maricá Imóveis",
-  description: "Você sonha, nós realizamos!",
-};
+  title: 'Maricá Imóveis',
+  description: 'Você sonha, nós realizamos!',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${oxanium.variable} ${montserrat.variable} max-w-[1360px] mx-auto bg-[url(/marica.jpg)] bg-no-repeat bg-center bg-cover antialiased flex flex-col min-h-screen overflow-y-scroll`}
-      >
+    <html lang="en" className={`${oxanium.variable} ${montserrat.variable}`}>
+      <body className="max-w-full xl:max-w-[1360px] xl:mx-auto bg-[url(/marica.jpg)] bg-no-repeat bg-center bg-cover antialiased flex flex-col min-h-screen overflow-y-scroll">
         <Header />
-        <main className="flex flex-1">
-          {children}
-        </main>
+        <main className="flex flex-1">{children}</main>
         <Footer />
       </body>
     </html>
-  );
+  )
 }
-
