@@ -25,12 +25,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${oxanium.variable} ${montserrat.variable}`}>
-      <body className="max-w-full xl:max-w-[1360px] xl:mx-auto bg-[url(/marica.jpg)] bg-no-repeat bg-center bg-cover antialiased flex flex-col min-h-screen overflow-y-scroll">
+    <html lang="pt" className={`${oxanium.variable} ${montserrat.variable}`}>
+      <body className="max-w-full xl:max-w-[1360px] xl:mx-auto antialiased flex flex-col min-h-screen overflow-y-scroll">
         <Header />
         <main className="flex flex-1">{children}</main>
         <Footer />
       </body>
     </html>
-  )
+  );
 }
