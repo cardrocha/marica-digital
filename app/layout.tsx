@@ -28,7 +28,9 @@ export default function RootLayout({
     <html lang="pt" className={`${oxanium.variable} ${montserrat.variable}`}>
       <body className="max-w-full xl:max-w-[1360px] xl:mx-auto antialiased flex flex-col min-h-screen overflow-y-scroll">
         <Header />
-        <main className="flex flex-1">{children}</main>
+        <main className="flex flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
