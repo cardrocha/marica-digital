@@ -1,5 +1,12 @@
 "use server";
 
+import { z } from "zod";
+
+const validationSchema = z.object({
+  name: z.string().min(6, { message: "Nome está muito curto!" }),
+  tel: z.string().min(15, { message: "Digite um número válido!" }),
+});
+
 export interface FormState {
   error?: boolean;
   success?: boolean;
@@ -10,18 +17,19 @@ export async function SubmitForm(
   prevState: FormState | null,
   formData: FormData
 ): Promise<FormState> {
-  const name = formData.get("name") as string;
-  const tel = formData.get("tel") as string;
+  const formDataObject = Object.fromEntries(formData);
 
-  if (!name || !tel) {
+  const result = validationSchema.safeParse(formDataObject);
+
+  if (!result.success) {
     return {
       error: true,
       success: false,
-      message: "Preencha todos os campos!",
+      message: result.error.errors[0].message,
     };
   }
 
-  console.log("Dados recebidos no servidor:", { name, tel });
+  console.log("Dados recebidos no servidor:", formDataObject);
 
   return {
     success: true,
