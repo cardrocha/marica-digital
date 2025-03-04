@@ -1,5 +1,5 @@
 import { useActionState } from 'react'
-import { SubmitForm } from '../lib/action'
+import { type FormState, SubmitForm } from '../lib/action'
 import Button from '../components/button'
 
 interface ModalProps {
@@ -7,8 +7,14 @@ interface ModalProps {
   onClick: () => void
 }
 
+const initialState: FormState = {
+  error: false,
+  success: false,
+  message: "",
+};
+
 export default function ModalItem({ openModal, onClick }: ModalProps) {
-  const [state, SubmitFormAction, pending] = useActionState(SubmitForm, null)
+  const [state, SubmitFormAction, pending] = useActionState(SubmitForm, initialState);
 
   return (
     <>

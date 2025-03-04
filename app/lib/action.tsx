@@ -1,12 +1,22 @@
 "use server";
 
-export async function SubmitForm(prevState: any, formData: FormData) {
-  const name = formData.get("name");
-  const tel = formData.get("tel");
+export interface FormState {
+  error?: boolean;
+  success?: boolean;
+  message?: string;
+}
+
+export async function SubmitForm(
+  prevState: FormState | null,
+  formData: FormData
+): Promise<FormState> {
+  const name = formData.get("name") as string;
+  const tel = formData.get("tel") as string;
 
   if (!name || !tel) {
     return {
       error: true,
+      success: false,
       message: "Preencha todos os campos!",
     };
   }
@@ -15,7 +25,7 @@ export async function SubmitForm(prevState: any, formData: FormData) {
 
   return {
     success: true,
-    message: "Formulário enviado! Entraremos em contato. Obrigado!"
-,
+    error: false,
+    message: "Formulário enviado com sucesso! Entraremos em contato.",
   };
 }
