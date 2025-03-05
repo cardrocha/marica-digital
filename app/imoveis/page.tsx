@@ -15,7 +15,7 @@ export default function ImoveisPage() {
 
   return (
     <section className="container mx-auto p-2 relative">
-      <h2 className="font-heading text-center underline text-purple-950 text-4xl font-bold py-2">
+      <h2 className="font-heading text-center underline text-purple-950 text-3xl md:text-4xl font-bold py-2">
         ~ Seu novo lar está aqui ~
       </h2>
 

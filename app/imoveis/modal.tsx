@@ -19,15 +19,15 @@ export default function ModalItem({ openModal, onClick }: ModalProps) {
   return (
     <>
       {openModal && (
-        <div className="fixed flex flex-col gap-5 p-5 justify-center items-center top-60 left-80 bg-black/80 rounded-xl w-[650px] h-[250px] z-10">
+        <div className="fixed flex flex-col gap-5 p-5 justify-center items-center top-40 xl:top-60 left-0 xl:left-80 bg-black/80 rounded-xl w-full xl:w-[650px] h-[300px] xl:h-[250px] z-10">
           {state?.success ? (
             <div className="flex flex-col gap-5 items-center">
-              <p className="text-green-400 text-xl">{state.message}</p>
+              <p className="text-green-400 text-center text-xl">{state.message}</p>
               <Button onClick={onClick}>Fechar</Button>
             </div>
           ) : (
             <>
-              <h1 className="text-2xl text-white">
+              <h1 className="text-xl text-center xl:text-2xl text-white">
                 Deixe seu contato e entraremos em contato:
               </h1>
 
@@ -54,11 +54,11 @@ export default function ModalItem({ openModal, onClick }: ModalProps) {
                   </label>
                   <input
                     className="px-2 py-1 bg-gray-100 placeholder-gray-600 rounded-sm"
-                    placeholder="Ex: (11) 91234-5678"
+                    placeholder="Ex: 1199999999"
                     type="tel"
                     name="tel"
                     id="tel"
-                    pattern="^\(?\d{2}\)?\s?(?:9\d{4}|\d{4})-\d{4}$"
+                    pattern="^\d{2}9?\d{8}$"
                   />
                 </div>
 

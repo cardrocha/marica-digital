@@ -4,7 +4,7 @@ import { z } from "zod";
 
 const validationSchema = z.object({
   name: z.string().min(6, { message: "Nome está muito curto!" }),
-  tel: z.string().min(15, { message: "Digite um número válido!" }),
+  tel: z.string().min(11, { message: "Digite um número válido!" }),
 });
 
 export interface FormState {
