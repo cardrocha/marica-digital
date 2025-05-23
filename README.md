@@ -7,10 +7,8 @@ Este projeto é um catálogo de imóveis desenvolvido para facilitar a busca e e
 ## 🚀 Tecnologias Utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
-
-- **React.js** - Biblioteca JavaScript para construção de interfaces dinâmicas e reativas.
-- **TypeScript** - Superset do JavaScript que adiciona tipagem estática ao código.
 - **Next.js** - Framework para React que melhora a performance com Server Side Rendering (SSR) e Static Site Generation (SSG).
+- **TypeScript** - Superset do JavaScript que adiciona tipagem estática ao código.
 - **Tailwind CSS** - Framework de estilização utilitário para criar layouts responsivos de forma eficiente.
 - **Lucide-react** - Ícones modernos e customizáveis para a interface.
 - **Zod** - Validação de dados baseada em esquemas.
